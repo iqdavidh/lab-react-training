@@ -6,6 +6,7 @@ import {Tabs} from 'antd';
 import IdCard from "./components/IdCard";
 import Greetings from "./components/Greetings";
 import Random from "./components/Random";
+import BoxColor from "./components/BoxColor";
 
 const {TabPane} = Tabs;
 
@@ -62,8 +63,10 @@ function App() {
             <Random min={1} max={100}/>
           </div>
         </TabPane>
+
         <TabPane tab="BoxColor" key="4">
-          Content of Tab Pane 3
+            <BoxColor r={255} g={0} b={0} />
+            <BoxColor r={128} g={255} b={0} />
         </TabPane>
 
         <TabPane tab="Card" key="6">
