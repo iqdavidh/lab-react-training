@@ -2,11 +2,10 @@ import React from 'react';
 
 import 'antd/dist/antd.css';
 import './index.css';
-import { Tabs } from 'antd';
+import {Tabs} from 'antd';
+import IdCard from "./components/IdCard";
 
-const { TabPane } = Tabs;
-
-
+const {TabPane} = Tabs;
 
 
 function callback(key) {
@@ -18,9 +17,34 @@ function App() {
   return (
 
       <Tabs defaultActiveKey="1" onChange={callback}>
+
+
         <TabPane tab="Id Card" key="1">
-          Content of Tab Pane 1
+
+          <div className="divFlex">
+            <IdCard
+                lastName='Doe'
+                firstName='John'
+                gender='male'
+                height={178}
+                birth={new Date("1992-07-14")}
+                picture="https://randomuser.me/api/portraits/men/44.jpg"
+            />
+
+            <IdCard
+                lastName='Delores '
+                firstName='Obrien'
+                gender='female'
+                height={172}
+                birth={new Date("1988-05-11")}
+                picture="https://randomuser.me/api/portraits/women/44.jpg"
+            />
+          </div>
+
+
         </TabPane>
+
+
         <TabPane tab="Greetings" key="2">
           Content of Tab Pane 2
         </TabPane>
@@ -37,7 +61,7 @@ function App() {
 
         <TabPane tab="Rating" key="7">
           Button
-          Rating  LikeButton ClickablePicture
+          Rating LikeButton ClickablePicture
         </TabPane>
 
 
