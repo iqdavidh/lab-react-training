@@ -1,0 +1,11 @@
+.tarjetaCredito{
+   padding: 20px;
+   width: 300px;
+   border-radius: 10px; margin-right: 20px;
+}
+
+.tarjetaCredito h1 {
+   font-size: 20px; text-align: right;
+}
+
+.panBanco{ margin-left: 20px}
