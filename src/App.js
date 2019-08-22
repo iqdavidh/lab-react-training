@@ -4,6 +4,8 @@ import 'antd/dist/antd.css';
 import './index.css';
 import {Tabs} from 'antd';
 import IdCard from "./components/IdCard";
+import Greetings from "./components/Greetings";
+import Random from "./components/Random";
 
 const {TabPane} = Tabs;
 
@@ -46,10 +48,19 @@ function App() {
 
 
         <TabPane tab="Greetings" key="2">
-          Content of Tab Pane 2
+
+          <div className="divFlex">
+            <Greetings lang="de" texto="Ludwig"/>
+            <Greetings lang="fr" texto={"François"}/>
+          </div>
+
         </TabPane>
         <TabPane tab="Random" key="3">
-          Content of Tab Pane 3
+
+          <div>
+            <Random min={1} max={6}/>
+            <Random min={1} max={100}/>
+          </div>
         </TabPane>
         <TabPane tab="BoxColor" key="4">
           Content of Tab Pane 3
